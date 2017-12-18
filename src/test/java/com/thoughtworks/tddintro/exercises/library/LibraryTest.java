@@ -35,17 +35,14 @@ public class LibraryTest {
     public void shouldPrintBookTitleWhenThereIsOneBook() {
         String title = "Book Title";
         books.add(title);
-
         library.listBooks();
-
         verify(printStream).println(title + "\n");
     }
 
     @Test
-    @Ignore // Remove each @Ignore and implement test
     public void shouldPrintNothingWhenThereAreNoBooks() {
-
-        // implement me
+        library.listBooks();
+        verify(printStream).println("");
     }
 
     @Test
